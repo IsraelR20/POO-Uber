@@ -1,12 +1,15 @@
-public class Car {
+public class Car { 
     Integer id;
     String license;
-    String driver;
+    Account driver; 
     Integer passenger;
 
+    public Car(String license, Account driver){ // constructor
+        this.license = license; 
+        this.driver = driver;
+    }
+
     void printDataCar() { // method to print the data of the car object
-        System.out.println("Car license: " + license);
-        System.out.println("Car driver: " + driver);
-        System.out.println("Car passenger: " + passenger);
+        System.out.println("Car license: " + license + "Driver: " + driver.name);
     }
 }
